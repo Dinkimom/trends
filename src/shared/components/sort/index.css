@@ -1,0 +1,40 @@
+.sort {
+	font-size: 1.2rem;
+	padding: 20px 10px;
+	color: var(--primary-color);
+	transition: all 0.5s;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.sort:not(.active) {
+	color: gray;
+}
+
+.sort:not(.active):hover {
+	color: var(--primary-color--hovered);
+}
+
+.sort:not(.active) .sort__direction {
+	visibility: hidden;
+}
+
+.sort__direction {
+	display: block;
+	translate: all 0.5;
+}
+
+.sort__direction.desc {
+	transform: rotate(-90deg);
+}
+
+.sort__direction.asc {
+	transform: rotate(90deg);
+}
+
+.sort__name {
+	margin-right: 10px;
+	text-transform: capitalize;
+}
